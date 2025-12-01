@@ -3,16 +3,16 @@ body {
     background: #f7f7f8;
     font-family: Arial, sans-serif;
     height: 100vh;
-    overflow: hidden;
+    height: 100dvh; 
+    overflow: hidden; 
 }
-
 .chat-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    height: 100dvh;
     width: 100%;
 }
-
 .messages {
     flex: 1;
     overflow-y: auto;
@@ -48,9 +48,7 @@ body {
     padding: 15px;
     background: white;
     border-top: 1px solid #ccc;
-    position: sticky;
-    bottom: 0;
-    z-index: 999;
+    flex-shrink: 0; 
 }
 
 #question {

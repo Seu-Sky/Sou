@@ -36,6 +36,19 @@ input.addEventListener("keypress", function (e) {
     if (e.key === "Enter") sendQuestion();
 });
 
-window.addEventListener("resize", () => {
-        document.body.style.height = window.innerHeight + "px";
-});
+const setHeight = () => {
+    const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    document.body.style.height = `${height}px`;
+    document.querySelector('.chat-container').style.height = `${height}px`;
+    
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+};
+
+if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', setHeight);
+} else {
+    window.addEventListener('resize', setHeight);
+}
+
+
+setHeight();
