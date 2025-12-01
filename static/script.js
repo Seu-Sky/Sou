@@ -35,3 +35,7 @@ async function sendQuestion() {
 input.addEventListener("keypress", function (e) {
     if (e.key === "Enter") sendQuestion();
 });
+
+window.addEventListener("resize", () => {
+        document.body.style.height = window.innerHeight + "px";
+});

@@ -2,6 +2,8 @@ body {
     margin: 0;
     background: #f7f7f8;
     font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .chat-container {
@@ -46,6 +48,9 @@ body {
     padding: 15px;
     background: white;
     border-top: 1px solid #ccc;
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
 }
 
 #question {
